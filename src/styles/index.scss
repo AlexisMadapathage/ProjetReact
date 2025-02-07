@@ -1,0 +1,20 @@
+@use "./variables";
+@use "./mixins";
+
+* {
+  box-sizing: border-box; /* Assure que padding et border ne modifient pas la largeur */
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  margin: 0;
+  padding: 0;
+  //background: #f8f8f8; 
+}
+
+ Ajoute une gestion globale des marges latérales 
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 50px; /* Crée un effet uniforme sur tous les composants sauf le footer */
+}

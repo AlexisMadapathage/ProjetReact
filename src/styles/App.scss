@@ -1,0 +1,20 @@
+/* Suppression des styles Vite inutiles */
+#root {
+  /* Suppression du max-width et du text-align */
+  margin: 0 auto;
+  padding: 0;  /* Enlève le padding qui pourrait causer un décalage */
+}
+
+/*Gestion du conteneur principal*/ 
+.container {
+  max-width: 1200px;  /* Ajuste la largeur max */
+  margin: 0 auto;  /* Centre horizontalement */
+  padding: 0 50px; /* Ajoute un padding latéral pour éviter que le contenu touche les bords */
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 100%; /* Élargir complètement */
+    max-width: none; /* Désactive la largeur max */
+    padding: 0; /* Supprime le padding latéral */
+  }
+}

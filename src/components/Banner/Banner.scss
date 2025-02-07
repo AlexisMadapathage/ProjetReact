@@ -1,0 +1,50 @@
+.banner {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  /* Assure une largeur max cohérente avec le container */
+  height: 220px; // Ajuste la hauteur selon le design
+  border-radius: 10px; // Bords arrondis
+  overflow: hidden; // Empêche l'image de dépasser les bords arrondis
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Permet de bien ajuster l'image au conteneur
+    filter: brightness(70%); // Ajuste le contraste et l'effet de cache
+  }
+
+  &__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3); // Ajoute un cache sombre transparent
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+  }
+
+  /* Version Mobile */
+  @media screen and (max-width: 768px) {
+    height: 100px;     /* Réduction de la hauteur de la bannière */
+    width: 100%;
+    margin: 0 auto;
+
+    &__text {
+      font-size: 12px;
+      /* Réduction de la taille du texte */
+      padding: 10px;
+      /* Ajustement du padding */
+    }
+  }
+}

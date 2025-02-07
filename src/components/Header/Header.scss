@@ -1,0 +1,51 @@
+.header {
+    background: #fff;
+    padding: 20px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo img {
+        height: 50px;
+    }
+
+    &__nav ul {
+        display: flex;
+        list-style: none;
+        gap: 40px;
+
+        li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    /* Version Mobile */
+    @media screen and (max-width: 768px) {
+        padding: 10px 20px;
+        /* Réduire l’espace autour */
+
+        .container {
+            padding: 0;
+        }
+
+        &__nav ul {
+            gap: 18px;
+            /* Réduire l’espacement entre les liens */
+        }
+
+        &__logo img {
+            height: 40px;
+            /* Réduire la taille du logo */
+        }
+    }
+}

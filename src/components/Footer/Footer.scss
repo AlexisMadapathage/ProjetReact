@@ -1,0 +1,21 @@
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    //background-color: #fff;
+    padding: 10px 0 0 0;
+  
+    .footer-image {
+      content: url("../../assets/icon/FooterDesktop.png"); // Image par défaut
+      max-width: 100%;
+      height: auto;
+    }
+  
+    @media screen and (max-width: 768px) {
+      .footer-image {
+        width: 100%;
+        content: url("../../assets/icon/FooterMobile.png"); // Image mobile
+      }
+    }
+  }  
