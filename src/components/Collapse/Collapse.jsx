@@ -1,0 +1,22 @@
+import { useState } from "react";
+import "./Collapse.scss";
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Icônes de flèche
+
+function Collapse({ title, content }) {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="collapse">
+      {/* En-tête cliquable */}
+      <div className="collapse__header" onClick={() => setIsOpen(!isOpen)}>
+        <h3>{title}</h3>
+        {isOpen ? <FaChevronUp className="collapse__icon" /> : <FaChevronDown className="collapse__icon" />}
+      </div>
+
+      {/* Contenu conditionnel */}
+      {isOpen && <div className="collapse__content">{content}</div>}
+    </div>
+  );
+}
+
+export default Collapse;

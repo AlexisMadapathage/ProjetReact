@@ -1,0 +1,44 @@
+.collapse {
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
+    border-radius: 5px;
+    overflow: hidden;
+    background: #f8f8f8;
+  }
+  
+  .collapse__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ff6060;
+    color: white;
+    padding: 15px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+  
+  .collapse__icon {
+    font-size: 20px;
+  }
+  
+  .collapse__content {
+    padding: 15px;
+    background: white;
+    border-top: 1px solid #ddd;
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Animation de fondu pour le contenu */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      max-height: 0;
+    }
+    to {
+      opacity: 1;
+      max-height: 500px;
+    }
+  }  
