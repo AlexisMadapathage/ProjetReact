@@ -1,44 +1,69 @@
 .collapse {
-    width: 100%;
-    max-width: 800px;
-    margin: 10px auto;
-    border-radius: 5px;
-    overflow: hidden;
-    background: #f8f8f8;
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto;
+  border-radius: 5px;
+  overflow: hidden;
+  background: #f8f8f8;
+}
+
+.collapse__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #ff6060;
+  color: white;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+  height: 80px;
+}
+
+.collapse__icon {
+  font-size: 20px;
+}
+
+.collapse__content {
+  padding: 15px;
+  background: white;
+  border-top: 1px solid #ddd;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Animation de fondu pour le contenu */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    max-height: 0;
   }
-  
+
+  to {
+    opacity: 1;
+    max-height: 500px;
+  }
+}
+
+/* Media query correctement appliquée */
+@media screen and (max-width: 768px) {
+  .collapse {
+    //max-width: 100%; /* Même largeur que le Banner */
+    width: 100%; /* Prend toute la largeur disponible */
+    margin: 0 auto; /* Centre le Collapse */
+  }
   .collapse__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #ff6060;
-    color: white;
-    padding: 15px;
-    cursor: pointer;
-    font-size: 18px;
-    font-weight: bold;
-    border-radius: 5px;
+    font-size: 14px; /* Réduit la taille du titre */
+    padding: 10px; /* Réduit le padding pour la version mobile */
+    height: 50px; /* Réduit la hauteur */
   }
-  
+
   .collapse__icon {
-    font-size: 20px;
+    font-size: 16px; /* Réduit la taille de l'icône */
   }
-  
+
   .collapse__content {
-    padding: 15px;
-    background: white;
-    border-top: 1px solid #ddd;
-    animation: fadeIn 0.3s ease-in-out;
+    font-size: 12px; /* Réduit la taille du texte */
+    padding: 10px; /* Ajuste l'espacement */
   }
-  
-  /* Animation de fondu pour le contenu */
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-      max-height: 0;
-    }
-    to {
-      opacity: 1;
-      max-height: 500px;
-    }
-  }  
+}
