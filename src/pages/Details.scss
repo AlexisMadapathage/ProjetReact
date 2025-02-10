@@ -1,15 +1,122 @@
 .details {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  
-    h1 {
-      font-size: 24px;
-      color: #ff6060;
-    }
-  
-    p {
-      font-size: 16px;
-      color: #333;
-    }
-  }  
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+
+  h1 {
+    font-size: 24px;
+    color: #ff6060;
+  }
+
+  p {
+    font-size: 16px;
+    color: #333;
+  }
+}
+
+.details__header {
+  display: flex;
+  justify-content: space-between;
+  /* Sépare les deux colonnes */
+  align-items: center;
+  /* Aligne verticalement */
+  flex-wrap: wrap;
+  /* Permet d'adapter sur mobile */
+  margin-top: 20px;
+}
+
+.details__info {
+  flex: 1;
+  /* Prend tout l'espace disponible */
+  min-width: 50%;
+  /* S'assure qu'il garde la moitié de la largeur */
+  font-weight: 600;
+}
+
+.details__info h1 {
+  flex: 1;
+  /* Prend tout l'espace disponible */
+  min-width: 50%;
+  /* S'assure qu'il garde la moitié de la largeur */
+  font-weight: 600;
+  color: #ff6060;
+}
+
+.details__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.details__tag {
+  background: #ff6060;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.details__host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.details__host-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  color: #ff6060;
+}
+
+.details__host img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.details__rating {
+  font-size: 30px;
+  color: #ff6060;
+  margin-top: 10px;
+}
+
+.details__collapses {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.details__collapses>div {
+  flex: 1;
+}
+
+/* Mode Mobile */
+@media screen and (max-width: 768px) {
+  .details__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .details__host {
+    flex-direction: row-reverse; /* Inverse l’ordre des éléments */
+    justify-content: flex-end;
+    align-items: center;
+    gap: 45px;
+    margin-top: 20px;
+  }
+
+  .details__rating {
+    font-size: 30px;
+    color: #ff6060;
+    margin-top: 0;
+  }
+
+  .details__collapses {
+    flex-direction: column;
+  }
+}

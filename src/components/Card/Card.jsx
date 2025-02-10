@@ -5,7 +5,6 @@ function Card({ id, title, cover }) {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    console.log("ID envoyé :", id); // Vérification dans la console
     navigate(`/logement/${id}`);
   };
 

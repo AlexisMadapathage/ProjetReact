@@ -6,21 +6,30 @@ import "./Details.scss";
 
 function Details() {
   const { id } = useParams(); // Récupère l'ID depuis l'URL
-  const [logement, setLogement] = useState(null);
+  const [logement, setLogement] = useState(null); // Commence à `null`
 
   useEffect(() => {
     fetch("/data.json") // Charge le fichier JSON
       .then((response) => response.json())
       .then((jsonData) => {
         const foundLogement = jsonData.find((item) => item.id === id);
-        setLogement(foundLogement);
+        if (foundLogement) {
+          setLogement(foundLogement);
+        } else {
+          setLogement(undefined); // Indique qu'aucun logement ne correspond
+        }
       })
       .catch((error) => console.error("Erreur lors du chargement du JSON :", error));
   }, [id]);
 
   // Redirection vers la page 404 si l'ID ne correspond à aucun logement
-  if (!logement) {
+  if (logement === undefined) {
     return <Navigate to="/404" />;
+  }
+
+  // Attendre que les données soient chargées
+  if (!logement) {
+    return <p>Chargement en cours...</p>;
   }
 
   return (
@@ -47,8 +56,8 @@ function Details() {
             <img src={logement.host.picture} alt={logement.host.name} />
           </div>
           <div className="details__rating">
-            {"★".repeat(logement.rating)}
-            {"☆".repeat(5 - logement.rating)}
+            {"★".repeat(Number(logement.rating))}
+            {"☆".repeat(5 - Number(logement.rating))}
           </div>
         </div>
       </div>
