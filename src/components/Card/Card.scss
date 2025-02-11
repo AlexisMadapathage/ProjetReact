@@ -4,7 +4,7 @@
   border-radius: 10px;
   overflow: hidden;
   text-align: left;
-  position: relative; /* Permet de positionner le titre dans l'image */
+  position: relative; 
 }
 
 .card__image {
@@ -17,36 +17,36 @@
 /* Titre à l'intérieur de l'image */
 .card__title {
   position: absolute;
-  bottom: 10px; /* Décale le titre vers le bas */
-  left: 10px; /* Décale le titre vers la gauche */
+  bottom: 10px;
+  left: 10px; 
   color: white;
   font-size: 16px;
   font-weight: bold;
-  background: rgba(0, 0, 0, 0.3); /* Ajoute un fond semi-transparent */
+  background: rgba(0, 0, 0, 0.3); 
   padding: 5px 10px;
   border-radius: 5px;
 }
 
+ /* Version Mobile */
 @media screen and (max-width: 768px) {
   .cards-container {
-    flex-direction: column; /* Une seule colonne */
-    align-items: center; /* Centrer les cartes */
-    padding: 10px 5px; /* Réduction du padding */
-    gap: 15px; /* Ajoute un espacement entre les cartes */
+    flex-direction: column; 
+    align-items: center; 
+    padding: 10px 5px; 
+    gap: 15px; 
   }
 
   .card {
-    flex: none; /* Désactive flex-grow */
-    width: 100%; /* Occupe 90% de la largeur pour éviter les bordures collées */
-    max-width: 350px; /* Limite la largeur des cartes sur écran large */
+    flex: none; 
+    width: 100%; 
+    max-width: 350px; 
     height: 250px;
   }
 
-  /* Ajustement du titre pour la version mobile */
   .card__title {
-    font-size: 14px; /* Réduit la taille du texte */
-    bottom: 5px; /* Décale légèrement vers le bas */
-    left: 5px; /* Ajuste l'alignement */
-    padding: 4px 8px; /* Ajuste le padding */
+    font-size: 14px; 
+    bottom: 5px; 
+    left: 5px; 
+    padding: 4px 8px; 
   }
 }

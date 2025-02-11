@@ -17,27 +17,20 @@
 .details__header {
   display: flex;
   justify-content: space-between;
-  /* Sépare les deux colonnes */
   align-items: center;
-  /* Aligne verticalement */
   flex-wrap: wrap;
-  /* Permet d'adapter sur mobile */
   margin-top: 20px;
 }
 
 .details__info {
   flex: 1;
-  /* Prend tout l'espace disponible */
   min-width: 50%;
-  /* S'assure qu'il garde la moitié de la largeur */
   font-weight: 600;
 }
 
 .details__info h1 {
   flex: 1;
-  /* Prend tout l'espace disponible */
   min-width: 50%;
-  /* S'assure qu'il garde la moitié de la largeur */
   font-weight: 600;
   color: #ff6060;
 }
@@ -95,7 +88,7 @@
   flex: 1;
 }
 
-/* Mode Mobile */
+ /* Version Mobile */
 @media screen and (max-width: 768px) {
   .details__header {
     flex-direction: column;
@@ -103,7 +96,7 @@
   }
 
   .details__host {
-    flex-direction: row-reverse; /* Inverse l’ordre des éléments */
+    flex-direction: row-reverse; 
     justify-content: flex-end;
     align-items: center;
     gap: 45px;

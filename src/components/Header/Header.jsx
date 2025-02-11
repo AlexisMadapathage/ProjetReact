@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; //permet de créer des liens de navigation sans recharger la page
 import "./Header.scss";
 import logo from "../../assets/icon/Logo.png";
 

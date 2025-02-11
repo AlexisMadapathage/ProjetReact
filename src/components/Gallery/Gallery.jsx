@@ -7,7 +7,6 @@ function Gallery() {
   const [logements, setLogements] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  // 📌 Charger les données depuis "public/data.json"
   useEffect(() => {
     fetch("/data.json")
       .then((response) => response.json())

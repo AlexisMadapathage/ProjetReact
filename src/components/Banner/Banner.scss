@@ -2,16 +2,15 @@
   position: relative;
   width: 100%;
   max-width: 1200px;
-  /* Assure une largeur max cohérente avec le container */
-  height: 220px; // Ajuste la hauteur selon le design
-  border-radius: 10px; // Bords arrondis
-  overflow: hidden; // Empêche l'image de dépasser les bords arrondis
+  height: 220px; 
+  border-radius: 10px; 
+  overflow: hidden; 
 
   &__image {
     width: 100%;
     height: 100%;
-    object-fit: cover; // Permet de bien ajuster l'image au conteneur
-    filter: brightness(70%); // Ajuste le contraste et l'effet de cache
+    object-fit: cover; 
+    filter: brightness(70%); 
   }
 
   &__overlay {
@@ -20,7 +19,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.3); // Ajoute un cache sombre transparent
+    background: rgba(0, 0, 0, 0.3); 
   }
 
   &__text {
@@ -36,15 +35,13 @@
 
   /* Version Mobile */
   @media screen and (max-width: 768px) {
-    height: 100px;     /* Réduction de la hauteur de la bannière */
+    height: 100px;    
     width: 100%;
     margin: 0 auto;
 
     &__text {
       font-size: 12px;
-      /* Réduction de la taille du texte */
       padding: 10px;
-      /* Ajustement du padding */
     }
   }
 }

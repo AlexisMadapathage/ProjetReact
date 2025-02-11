@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; //hook qui permet de naviguer entre les pages sans recharger l’application
 import "./Card.scss";
 
 function Card({ id, title, cover }) {

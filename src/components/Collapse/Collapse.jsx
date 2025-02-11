@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState } from "react"; // hook qui permet de gérer un état local dans un composant fonctionnel
 import "./Collapse.scss";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"; // Icônes de flèche
 
